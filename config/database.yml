@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: sweater-weather_production
-  username: sweater-weather
-  password: <%= ENV['CHESS-QUEST-WEB_DATABASE_PASSWORD'] %>
