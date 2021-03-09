@@ -11,24 +11,34 @@ describe "Forecast API" do
 
       expect(data).to be_a(Hash)
       expect(data[:data]).to be_a(Hash)
-      expect(data[:data].keys).to eq(:id, :type, :attributes)
-      expect(data[:data][0][:id]).to be_a(Integer)
-      expect(data[:data][0][:type]).to eq("forecast")
-      expect(data[:data][0][:attributes]).to be_a(Hash)
-      expect(data[:data][0][:attributes].keys).to eq([:current_weather, :daily_weather, :hourly_weather])
-      expect(data[:data][0][:attributes][:data_name]).to be_a(String)
-      expect(data[:data][0][:attributes][:travel_time]).to be_a(String)
-      expect(data[:data][0][:attributes][:difficulty]).to be_a(Integer)
-      expect(data[:data][0][:attributes][:parking]).to be_a(String)
-      expect(data[:data][0][:attributes][:loops].keys).to eq([:"1"])
-      expect(data[:data][0][:attributes][:loops][:"1"]).to be_a(Hash)
-      expect(data[:data][0][:attributes][:loops][:"1"].keys).to eq([:name, :distance, :steps])
-      expect(data[:data][0][:attributes][:loops][:"1"][:name]).to be_a(String)
-      expect(data[:data][0][:attributes][:loops][:"1"][:distance]).to be_a(String)
-      expect(data[:data][0][:attributes][:loops][:"1"][:steps]).to be_a(Integer)
-      expect(data[:data][0][:attributes][:forecast]).to be_a(Hash)
-      expect(data[:data][0][:attributes][:forecast].keys).to eq([:summary, :temperature])
-      expect(data[:data][0][:attributes][:forecast][:summary]).to be_a(String)
-      expect(data[:data][0][:attributes][:forecast][:temperature]).to be_a(String)
+      expect(data[:data]).to have_key(:id)
+      expect(data[:data]).to have_key(:type)
+      expect(data[:data]).to have_key(:attributes)
+      expect(data[:data][:id]).to eq(nil)
+      expect(data[:data][:type]).to eq("forecast")
+      expect(data[:data][:attributes]).to be_a(Hash)
+      expect(data[:data][:attributes].keys).to eq([:id, :current_weather, :daily_weather, :hourly_weather])
     end
   end
+  describe "Sad Paths" do
+    it "returns error message when given invalid params", :vcr do
+      get "/api/v1/forecast?location=dfghjhfdffg"
+      binding.pry
+
+      expect(response).to be_successful
+    end
+
+    it "returns error when params are blank", :vcr do
+      get "/api/v1/forecast?location="
+
+      expect(response).to be_successful
+    end
+
+    it "returns an error when this thing happens", :vcr do
+      get "/api/v1/forecast?location=#$%^&^"
+      binding.pry
+
+      expect(response).to be_successful
+    end
+  end
+end
