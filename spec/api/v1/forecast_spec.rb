@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe "Forcast API" do
+describe "Forecast API" do
   describe "Happy Path" do
-    it "retrieves a weather forcast for a given city", :vcr do
+    it "retrieves a weather forecast for a given city", :vcr do
       headers = {'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json'}
       get "/api/v1/forecast?location=denver,co"
 
