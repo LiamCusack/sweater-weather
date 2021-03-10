@@ -2,12 +2,12 @@ require 'rails_helper'
 
 describe RoadTrip, :vcr do
   it 'attributes' do
-    image = UnsplashService.retrieve_image("Denver, CO")
-    background = Background.new(image, "Denver, CO")
+    roadtrip = RoadTrip.new({}, "Denver,CO", "England", "impossible route")
 
-    expect(background).to be_a(Background)
-    expect(background.image_url).to eq(image[:results][0][:urls][:full])
-    expect(background.photographer).to eq(image[:results][0][:user][:name])
-    expect(background.location).to eq("Denver, CO")
+    expect(roadtrip).to be_a(RoadTrip)
+    expect(roadtrip.start_city).to eq("Denver,CO")
+    expect(roadtrip.end_city).to eq("England")
+    expect(roadtrip.travel_time).to eq("impossible route")
+    expect(roadtrip.weather_at_eta).to be_a(Hash)
   end
 end

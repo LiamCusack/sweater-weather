@@ -11,7 +11,8 @@ class RoadTripFacade
       eta_forecast = weather[:hourly].detect do |hour|
         hour[:dt] >= (travel_time.to_i + Time.now.to_i)
       end
-      RoadTrip.new(eta_forcast, start, dest, travel_time)
+      w_a_eta = { temperature: eta_forecast[:temp], conditions: eta_forecast[:weather][0][:description]}
+      RoadTrip.new(w_a_eta, start, dest, travel_time)
     end
 
     def is_route_possible(start, dest)
@@ -19,10 +20,8 @@ class RoadTripFacade
       if directions[:route][:formattedTime].present?
         weather_at_eta(start, dest, directions[:route][:formattedTime])
       else
-        results = {
-          travel_time: "impossible route",
-          note: ""
-                  }
+        results = {}
+        RoadTrip.new(results, start, dest, "impossible route")
       end
     end
   end
