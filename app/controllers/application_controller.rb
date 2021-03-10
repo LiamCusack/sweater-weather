@@ -13,6 +13,8 @@ class ApplicationController < ActionController::API
       render json: {error: "Bad Request: email cannot be blank"}, status: 400
     elsif params[:location] == ""
       render json: {error: "Bad Request: location cannot be blank"}, status: 400
+    elsif (params[:origin] || params[:destination]) == ""
+      render json: {error: "Bad Request: origin or destination cannot be blank"}, status: 400
     else
       render json: {error: "Bad Request: email is already taken"}, status: 400
     end
