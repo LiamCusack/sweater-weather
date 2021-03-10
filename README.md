@@ -4,8 +4,6 @@ Sweater-weather is a backend application that allows a user to plan a complete i
 
 This app was the culmination of consuming several different api's and extrapolating the desired date to then return to the user through the app's own api. The API's in use were the Mapquest API, Unsplash API, and Open Weather Map API.
 
-Sweater-weather is the results of efforts by Liam Cusack you can reach Liam at [GitHub](https://github.com/liamcusack), [LinkedIn](https://www.linkedin.com/in/liam-cusack-6a9a0a169/), and at his email address: LCusack8108@gmail.com
-
 ## Getting Started
 
 ###### Versions
