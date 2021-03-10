@@ -30,14 +30,11 @@ describe "Forecast API" do
     it "returns error when params are blank", :vcr do
       get "/api/v1/forecast?location="
 
-      expect(response).to be_successful
-    end
+      json = JSON.parse(response.body, symbolize_names: true)
 
-    it "returns an error when this thing happens", :vcr do
-      get "/api/v1/forecast?location=#$%^&^"
-      binding.pry
-
-      expect(response).to be_successful
+      expect(response).to_not be_successful
+      expect(response.status).to be(400)
+      expect(json[:error]).to eq("Bad Request: location cannot be blank")
     end
   end
 end
