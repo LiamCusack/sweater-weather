@@ -1,3 +1,6 @@
 class User < ApplicationRecord
-  validates :password, :confirmation => true
+  validates :email, :presence => true,
+                    :uniqueness => true
+  validates :password, :presence => true,
+                       :confirmation => true
 end
