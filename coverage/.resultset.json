@@ -293,7 +293,7 @@
           null,
           1,
           null,
-          1,
+          0,
           null,
           0,
           0,
@@ -662,6 +662,33 @@
           null
         ]
       },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/spec/facades/road_trip_facade_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/facades/road_trip_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/spec/models/user_spec.rb": {
         "lines": [
           1,
@@ -728,12 +755,152 @@
       },
       "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/spec/services/mapquest_service_spec.rb": {
         "lines": [
-
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/services/mapquest_service.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          21,
+          21,
+          21,
+          null,
+          21,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          23,
+          null,
+          null,
+          1,
+          23,
+          null,
+          null,
+          null
         ]
       },
       "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/spec/services/open_weather_service_spec.rb": {
         "lines": [
-
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/services/open_weather_service.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          21,
+          21,
+          21,
+          21,
+          21,
+          null,
+          21,
+          null,
+          null,
+          1,
+          null,
+          1,
+          21,
+          null,
+          null,
+          1,
+          21,
+          null,
+          null,
+          null
         ]
       },
       "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/spec/services/unsplash_service_spec.rb": {
@@ -846,69 +1013,6 @@
           null
         ]
       },
-      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/services/mapquest_service.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          20,
-          20,
-          20,
-          null,
-          20,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          20,
-          null,
-          null,
-          1,
-          20,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/services/open_weather_service.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          20,
-          20,
-          20,
-          20,
-          20,
-          null,
-          20,
-          null,
-          null,
-          1,
-          null,
-          1,
-          20,
-          null,
-          null,
-          1,
-          20,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/poros/current_weather.rb": {
         "lines": [
           1,
@@ -985,8 +1089,18 @@
       },
       "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/controllers/api/v1/road_trip_controller.rb": {
         "lines": [
-          1,
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -1037,6 +1151,6 @@
         ]
       }
     },
-    "timestamp": 1615366665
+    "timestamp": 1615374001
   }
 }

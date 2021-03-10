@@ -10,8 +10,9 @@ class MapquestService
     end
 
     def get_directions(start, dest)
-      response = conn.get("/directions/v2/optimizedRoute") do |req|
-        req.params[:json] = {"locations":[start,start,dest,dest]}
+      response = conn.get("/directions/v2/route") do |req|
+        req.params[:from] = start
+        req.params[:to] = dest
         req.params[:key] = ENV['MAPQUEST_API_KEY']
       end
       json_parse(response)

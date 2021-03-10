@@ -26,11 +26,11 @@ describe "Road Trip API" do
       expect(road_trip[:data][:attributes][:end_city]).to eq(body[:destination])
       expect(road_trip[:data][:attributes][:end_city]).to be_a(String)
       expect(road_trip[:data][:attributes][:travel_time]).to be_a(String)
-      expect(road_trip[:data][:attributes][:weather_at_eta]).to be_a(YO THIS IS SOME KIND OF OBJECT)
+      expect(road_trip[:data][:attributes][:weather_at_eta]).to be_a(YOTHISISSOMEKINDOFOBJECT)
       expect(road_trip[:data][:attributes][:weather_at_eta].keys).to eq(:temperature, :conditions, :note)
       expect(road_trip[:data][:attributes][:weather_at_eta][:temperature]).to be_a(Float)
       expect(road_trip[:data][:attributes][:weather_at_eta][:conditions]).to be_a(String)
-      expect(road_trip[:data][:attributes][:weather_at_eta][:note]).to be_a(WHO KNOWS?)
+      expect(road_trip[:data][:attributes][:weather_at_eta][:note]).to be_a(WHOKNOWS)
     end
   end
 end
