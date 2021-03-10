@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::API
   rescue_from "Bad Request", with: :status_400
   rescue_from ActiveRecord::RecordInvalid, with: :status_400
-  rescue_from  ArgumentError, with: :invalid_location
+  rescue_from ArgumentError, with: :invalid_location
+  rescue_from ActiveRecord::RecordNotFound, with: :unauthorized_api_key
 
   def status_400
     if params[:password] == ""
@@ -15,5 +16,9 @@ class ApplicationController < ActionController::API
     else
       render json: {error: "Bad Request: email is already taken"}, status: 400
     end
+  end
+
+  def unauthorized_api_key
+    render json: { error: "Unauthorized: Api Key is not valid"}, status: 401
   end
 end
