@@ -2,13 +2,10 @@ require 'rails_helper'
 
 describe BackgroundsFacade, :vcr do
   describe "class methods" do
-    before :each do
-    end
-
     it "get_background" do
-    end
+      background = BackgroundsFacade.get_background("Denver, CO")
 
-    it "find_images" do
+      expect(background).to be_a(Background)
     end
   end
 end
