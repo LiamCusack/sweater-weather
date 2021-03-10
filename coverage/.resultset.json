@@ -287,10 +287,23 @@
           null,
           null,
           null,
+          null,
           1,
           null,
           1,
-          0,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
           null,
           0,
           0,
@@ -589,6 +602,15 @@
           2,
           2,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -602,6 +624,10 @@
           null,
           null,
           1,
+          null,
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -904,9 +930,9 @@
         "lines": [
           1,
           1,
-          6,
-          6,
-          2,
+          7,
+          7,
+          3,
           null,
           4,
           null,
@@ -915,7 +941,7 @@
           1,
           null,
           1,
-          6,
+          7,
           null,
           null
         ]
@@ -928,8 +954,23 @@
           1,
           null
         ]
+      },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/controllers/api/v1/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1615359278
+    "timestamp": 1615361233
   }
 }

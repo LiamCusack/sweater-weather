@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-09T23:54:38-07:00">2021-03-09T23:54:38-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-10T00:27:13-07:00">2021-03-10T00:27:13-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  96.26%
+  96.14%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         7.27
+         7.08
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>42</b> files in total.
+    <b>43</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>401</b> relevant lines,
-    <span class="green"><b>386</b> lines covered</span> and
-    <span class="red"><b>15</b> lines missed. </span>
+    <b>414</b> relevant lines,
+    <span class="green"><b>398</b> lines covered</span> and
+    <span class="red"><b>16</b> lines missed. </span>
     (<span class="green">
-  96.26%
+  96.14%
 </span>
 )
   </div>
@@ -93,13 +93,24 @@
           </tr>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#8f62b552dd9021a43b8349f5df329a60dfb6a964" class="src_link" title="app/controllers/api/v1/sessions_controller.rb">app/controllers/api/v1/sessions_controller.rb</a></td>
+            <td class="yellow strong cell--number t-file__coverage">83.33 %</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0.83</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#b860560c9bab2abf8d152a6357316ada2662a420" class="src_link" title="app/controllers/api/v1/users_controller.rb">app/controllers/api/v1/users_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">16</td>
             <td class="cell--number">9</td>
             <td class="cell--number">9</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.11</td>
+            <td class="cell--number">3.56</td>
             
           </tr>
         
@@ -149,12 +160,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#a3e1304186ece5a102b36323016722a61f577373" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="yellow strong cell--number t-file__coverage">85.71 %</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0.86</td>
             
           </tr>
         
@@ -424,12 +435,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#1569a78740a0abcbdfe0f183400efbf55c6e2348" class="src_link" title="spec/api/v1/sessions_spec.rb">spec/api/v1/sessions_spec.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">44.44 %</td>
-            <td class="cell--number">28</td>
-            <td class="cell--number">18</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">0.44</td>
+            <td class="red strong cell--number t-file__coverage">60.87 %</td>
+            <td class="cell--number">41</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">0.61</td>
             
           </tr>
         
@@ -853,6 +864,158 @@
 </div>
 
       
+        <div class="source_table" id="8f62b552dd9021a43b8349f5df329a60dfb6a964">
+  <div class="header">
+    <h3>app/controllers/api/v1/sessions_controller.rb</h3>
+    <h4>
+      <span class="yellow">
+  83.33%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>6</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Api::V1::SessionsController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def create</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    user = User.find_by(email: params[:email])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def session_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    params.permit(:email, :password)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="b860560c9bab2abf8d152a6357316ada2662a420">
   <div class="header">
     <h3>app/controllers/api/v1/users_controller.rb</h3>
@@ -902,8 +1065,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="3">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="7" data-linenumber="3">
+            <span class="hits">7</span>
             
 
             
@@ -913,8 +1076,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="4">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="7" data-linenumber="4">
+            <span class="hits">7</span>
             
 
             
@@ -924,8 +1087,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="5">
+            <span class="hits">3</span>
             
 
             
@@ -1023,8 +1186,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="14">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="7" data-linenumber="14">
+            <span class="hits">7</span>
             
 
             
@@ -2090,8 +2253,8 @@
   <div class="header">
     <h3>app/models/user.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="yellow">
+  85.71%
 </span>
 
       lines covered
@@ -2100,9 +2263,9 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>7</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
 
     
@@ -2202,6 +2365,50 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.authenticate_password(password)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">    self.authenticate(password)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -6969,7 +7176,7 @@
     <h3>spec/api/v1/sessions_spec.rb</h3>
     <h4>
       <span class="red">
-  44.44%
+  60.87%
 </span>
 
       lines covered
@@ -6978,9 +7185,9 @@
     
 
     <div class="t-line-summary">
-      <b>18</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <b>23</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
+      <span class="red"><b>9</b> lines missed.</span>
     </div>
 
     
@@ -7041,7 +7248,7 @@
 
             
 
-            <code class="ruby">    it &quot;can create a new session&quot; do</code>
+            <code class="ruby">    before :each do</code>
           </li>
         </div>
       
@@ -7063,7 +7270,7 @@
 
             
 
-            <code class="ruby">        &quot;email&quot;: &quot;whatever@example.com&quot;,</code>
+            <code class="ruby">        &quot;email&quot;: &quot;unique@new.com&quot;,</code>
           </li>
         </div>
       
@@ -7074,7 +7281,7 @@
 
             
 
-            <code class="ruby">        &quot;password&quot;: &quot;password&quot;</code>
+            <code class="ruby">        &quot;password&quot;: &quot;bananas&quot;,</code>
           </li>
         </div>
       
@@ -7085,12 +7292,23 @@
 
             
 
+            <code class="ruby">        &quot;password_confirmation&quot;: &quot;bananas&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
             <code class="ruby">        }</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
+          <li class="covered" data-hits="1" data-linenumber="11">
             <span class="hits">1</span>
             
 
@@ -7101,7 +7319,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -7112,24 +7330,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
+          <li class="covered" data-hits="1" data-linenumber="13">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      post &quot;/api/v1/sessions&quot;, headers: headers, params: body.to_json</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">      created_session = JSON.parse(response.body, symbolize_names: true)</code>
+            <code class="ruby">      post &quot;/api/v1/users&quot;, headers: headers, params: body.to_json</code>
           </li>
         </div>
       
@@ -7145,106 +7352,18 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="15">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      expect(response).to be_successful</code>
+            
+
+            <code class="ruby">      @user = JSON.parse(response.body, symbolize_names: true)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby">      expect(created_session).to be_a(Hash)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="17">
-            
-            
-
-            
-
-            <code class="ruby">      expect(created_session[:data].keys).to eq([:id, :type, :attributes])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">      expect(created_session[:data][:id]).to eq(Session.last.id.to_s)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">      expect(created_session[:data][:type]).to eq(&quot;sessions&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="20">
-            
-            
-
-            
-
-            <code class="ruby">      expect(created_session[:data][:attributes]).to be_a(Hash)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby">      expect(created_session[:data][:attributes].keys).to eq([:email, :api_key])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">      expect(created_session[:data][:attributes][:email]).to eq(body[:email])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="23">
-            
-            
-
-            
-
-            <code class="ruby">      expect(created_session[:data][:attributes][:api_key]).to be_a(String)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -7255,13 +7374,101 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &quot;can create a new session&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      body = {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">        &quot;email&quot;: &quot;whatever@example.com&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">        &quot;password&quot;: &quot;password&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">        }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      headers = {&#39;CONTENT_TYPE&#39; =&gt; &#39;application/json&#39;, &#39;ACCEPT&#39; =&gt; &#39;application/json&#39;}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      post &quot;/api/v1/sessions&quot;, headers: headers, params: body.to_json</code>
           </li>
         </div>
       
@@ -7272,7 +7479,7 @@
 
             
 
-            <code class="ruby">  describe &#39;Sad Paths&#39; do</code>
+            <code class="ruby">      created_session = JSON.parse(response.body, symbolize_names: true)</code>
           </li>
         </div>
       
@@ -7283,12 +7490,155 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">      expect(response).to be_successful</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">      expect(created_session).to be_a(Hash)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">      expect(created_session[:data].keys).to eq([:id, :type, :attributes])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">      expect(created_session[:data][:id]).to eq(Session.last.id.to_s)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">      expect(created_session[:data][:type]).to eq(&quot;sessions&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">      expect(created_session[:data][:attributes]).to be_a(Hash)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">      expect(created_session[:data][:attributes].keys).to eq([:email, :api_key])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">      expect(created_session[:data][:attributes][:email]).to eq(body[:email])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby">      expect(created_session[:data][:attributes][:api_key]).to be_a(String)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &#39;Sad Paths&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
