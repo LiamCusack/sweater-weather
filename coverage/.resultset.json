@@ -204,6 +204,16 @@
           null
         ]
       },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/spec/factories/users.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/config/routes.rb": {
         "lines": [
           1,
@@ -230,7 +240,7 @@
           1,
           null,
           1,
-          0,
+          1,
           null,
           null
         ]
@@ -249,8 +259,21 @@
           null,
           null
         ]
+      },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/models/user.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1615342236
+    "timestamp": 1615343690
   }
 }
