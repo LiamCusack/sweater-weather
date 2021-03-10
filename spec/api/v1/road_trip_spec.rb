@@ -11,7 +11,7 @@ describe "Road Trip API" do
       headers = {'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json'}
 
       post "/api/v1/road_trip", headers: headers, params: body.to_json
-
+      
       road_trip = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_successful
