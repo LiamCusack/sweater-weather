@@ -293,7 +293,7 @@
           null,
           1,
           null,
-          0,
+          1,
           null,
           0,
           0,
@@ -983,6 +983,14 @@
           null
         ]
       },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/controllers/api/v1/road_trip_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/app/controllers/api/v1/users_controller.rb": {
         "lines": [
           1,
@@ -1029,6 +1037,6 @@
         ]
       }
     },
-    "timestamp": 1615366585
+    "timestamp": 1615366665
   }
 }
