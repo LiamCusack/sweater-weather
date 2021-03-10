@@ -33,6 +33,7 @@ describe "Sessions API" do
       expect(created_session[:data][:attributes]).to be_a(Hash)
       expect(created_session[:data][:attributes].keys).to eq([:email, :api_key])
       expect(created_session[:data][:attributes][:email]).to eq(body[:email])
+      expect(created_session[:data][:attributes][:email]).to be_a(String)
       expect(created_session[:data][:attributes][:api_key]).to be_a(String)
     end
   end
