@@ -74,6 +74,19 @@ describe "Road Trip API", :vcr do
     end
   end
   describe "Sad Paths" do
+    before :each do
+      body = {
+        "email": "3unique5me@new.com",
+        "password": "bananas",
+        "password_confirmation": "bananas"
+        }
+      headers = {'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json'}
+
+      post "/api/v1/users", headers: headers, params: body.to_json
+
+      @user = JSON.parse(response.body, symbolize_names: true)
+    end
+
     it "returns an error if the api_key is invalid" do
       body = {
         "origin": "Denver,CO",
@@ -106,6 +119,15 @@ describe "Road Trip API", :vcr do
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
       expect(json[:error]).to eq("Bad Request: origin or destination cannot be blank")
+    end
+
+    it "returns an error if you try to pass params in url" do
+      post "/api/v1/road_trip?email=3unique5me@new.com&api_key=#{@user[:data][:attributes][:api_key]}"
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to be(401)
+      expect(json[:error]).to eq("Unauthorized: You shall not pass... parameters through the url")
     end
   end
 end

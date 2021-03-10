@@ -23,4 +23,10 @@ class ApplicationController < ActionController::API
   def unauthorized_api_key
     render json: { error: "Unauthorized: Api Key is not valid"}, status: 401
   end
+
+  def block_url_params
+    unless request.query_parameters.empty?
+      render json: { error: "Unauthorized: You shall not pass... parameters through the url"}, status: 401
+    end
+  end
 end

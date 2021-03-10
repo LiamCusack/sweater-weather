@@ -1,4 +1,6 @@
 class Api::V1::RoadTripController < ApplicationController
+  before_action :block_url_params, only: [:create]
+  
   def create
     user = User.find_by(api_key: roadtrip_params[:api_key])
     if user.present? && params[:origin].present? && params[:destination].present?
