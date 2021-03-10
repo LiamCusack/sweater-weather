@@ -1,9 +1,9 @@
 class UnsplashService
   class << self
 
-    def retrieve_images(location)
+    def retrieve_image(location)
       response = conn.get("/search/photos") do |req|
-        req.params['client_id'] = ENV['UNSPLASH_API_KEY']
+        req.params[:client_id] = ENV['UNSPLASH_API_KEY']
         req.params[:per_page] = 1
         req.params[:query] = location
       end
