@@ -1,11 +1,11 @@
 class Api::V1::ForecastController < ApplicationController
   def index
-    if params[:location].present?
+    if params[:location].present? && params[:location] != ""
       forcast = ForecastFacade.find_forecast(params[:location])
 
       render json: ForecastSerializer.new(forcast)
-    else
-      render json: { error: "Parameters missing" }
+    else params[:location] == ""
+      self.status_400
     end
   end
 end
