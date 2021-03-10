@@ -13,7 +13,9 @@ describe "Users API" do
       post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params, symbolize_names: true)
 
       expect(response).to be_successful
-      expect(create_user.email).to eq(user_params)
+      expect(created_user.email).to eq(user_params[:email])
+      expect(created_user.password).to eq(user_params[:password])
+      expect(created_user.password_confirmation).to eq(user_params[:password_confirmation])
     end
   end
 end

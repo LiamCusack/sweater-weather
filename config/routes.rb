@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get '/munchies', to: 'munchies#index'
       get '/trails', to: 'trails#index'
       get '/backgrounds', to: 'backgrounds#index'
+      post '/users', to: 'users#create'
     end
   end
 end
