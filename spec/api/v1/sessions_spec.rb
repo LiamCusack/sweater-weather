@@ -2,6 +2,19 @@ require "rails_helper"
 
 describe "Sessions API" do
   describe "Happy Paths" do
+    before :each do
+      body = {
+        "email": "unique@new.com",
+        "password": "bananas",
+        "password_confirmation": "bananas"
+        }
+      headers = {'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json'}
+
+      post "/api/v1/users", headers: headers, params: body.to_json
+
+      @user = JSON.parse(response.body, symbolize_names: true)
+    end
+
     it "can create a new session" do
       body = {
         "email": "whatever@example.com",
