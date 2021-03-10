@@ -3,12 +3,7 @@ class BackgroundsFacade
 
     def get_background(location)
       image = find_image(location)
-
+      Background.new(image, location)
     end
-
-    def find_image(location)
-      images = PexelsService.retrieve_images(location)
-    end
-
   end
 end
