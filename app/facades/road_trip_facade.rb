@@ -11,7 +11,7 @@ class RoadTripFacade
       eta_forecast = weather[:hourly].detect do |hour|
         hour[:dt] >= (travel_time.to_i + Time.now.to_i)
       end
-      w_a_eta = { temperature: eta_forecast[:temp], conditions: eta_forecast[:weather][0][:description]}
+      w_a_eta = { temperature: (eta_forecast[:temp] - 273.15) * (9/5) +32, conditions: eta_forecast[:weather][0][:description]}
       RoadTrip.new(w_a_eta, start, dest, travel_time)
     end
 

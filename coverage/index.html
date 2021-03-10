@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-10T06:45:03-07:00">2021-03-10T06:45:03-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-10T07:30:54-07:00">2021-03-10T07:30:54-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -165,7 +165,7 @@
             <td class="cell--number">18</td>
             <td class="cell--number">18</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.89</td>
+            <td class="cell--number">2.00</td>
             
           </tr>
         
@@ -2738,8 +2738,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="12">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="6" data-linenumber="12">
+            <span class="hits">6</span>
             
 
             
@@ -2766,7 +2766,7 @@
 
             
 
-            <code class="ruby">      w_a_eta = { temperature: eta_forecast[:temp], conditions: eta_forecast[:weather][0][:description]}</code>
+            <code class="ruby">      w_a_eta = { temperature: (eta_forecast[:temp] - 273.15) * (9/5) +32, conditions: eta_forecast[:weather][0][:description]}</code>
           </li>
         </div>
       
@@ -3374,7 +3374,7 @@
 
             
 
-            <code class="ruby">    @temp = data[:temp]</code>
+            <code class="ruby">    @temp = (data[:temp] - 273.15) * (9/5) +32</code>
           </li>
         </div>
       
@@ -3385,7 +3385,7 @@
 
             
 
-            <code class="ruby">    @feels_like = data[:feels_like]</code>
+            <code class="ruby">    @feels_like = (data[:feels_like] - 273.15) * (9/5) +32</code>
           </li>
         </div>
       
@@ -3581,7 +3581,7 @@
 
             
 
-            <code class="ruby">    @max_temp = data[:temp][:max]</code>
+            <code class="ruby">    @max_temp = (data[:temp][:max] - 273.15) * (9/5) +32</code>
           </li>
         </div>
       
@@ -3592,7 +3592,7 @@
 
             
 
-            <code class="ruby">    @min_temp = data[:temp][:min]</code>
+            <code class="ruby">    @min_temp = (data[:temp][:min] - 273.15) * (9/5) +32</code>
           </li>
         </div>
       
@@ -3874,7 +3874,7 @@
 
             
 
-            <code class="ruby">    @temp = data[:temp]</code>
+            <code class="ruby">    @temp = (data[:temp] - 273.15) * (9/5) +32</code>
           </li>
         </div>
       
