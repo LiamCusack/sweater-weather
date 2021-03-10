@@ -1,4 +1,4 @@
-require 'rails-helper'
+require 'rails_helper'
 
 describe UnsplashService, :vcr do
   describe "class methods" do
@@ -6,12 +6,12 @@ describe UnsplashService, :vcr do
       image = UnsplashService.retrieve_image("Denver, CO")
 
       expect(image).to be_a(Hash)
-      expect(image[:results]).to have_key(:urls)
-      expect(image[:results]).to have_key(:user)
-      expect(image[:results][:urls]).to have_key(:full)
-      expect(image[:results][:urls][:full]).to be_a(String)
-      expect(image[:results][:user]).to have_key(:name)
-      expect(image[:results][:user][:name]).to be_a(:string)
+      expect(image[:results][0]).to have_key(:urls)
+      expect(image[:results][0]).to have_key(:user)
+      expect(image[:results][0][:urls]).to have_key(:full)
+      expect(image[:results][0][:urls][:full]).to be_a(String)
+      expect(image[:results][0][:user]).to have_key(:name)
+      expect(image[:results][0][:user][:name]).to be_a(String)
     end
   end
 end

@@ -4,7 +4,7 @@ class TrailsFacade
     def get_trip_itinerary(start, dest, min_steps)
       trails = get_trails(dest, min_steps)
       directions = get_directions(trails)
-      forecast = get_forcast(directions)
+      forecast = get_forecast(directions)
       build_itinerary(forecast)
     end
 
