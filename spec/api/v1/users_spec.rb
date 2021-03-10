@@ -11,12 +11,18 @@ describe "Users API" do
       headers = {'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json'}
 
       post "/api/v1/users", headers: headers, params: body.to_json
-      created_user = User.last
-
+      created_user = JSON.parse(response.body, symbolize_names: true)
+      binding.pry
       expect(response).to be_successful
-      expect(created_user.email).to eq(body[:email])
-      expect(created_user.password).to eq(body[:password])
-      expect(created_user.password).to eq(body[:password_confirmation])
+      expect(created_user).to be_a(Hash)
+      expect(created_user[:data].keys).to eq([:id, :type, :attributes])
+      expect(created_user[:data][:id]).to eq(User.last.id)
+      expect(created_user[:data][:type]).to eq("users")
+      expect(created_user[:data][:attributes]).to be_a(Hash)
+      expect(created_user[:data][:attributes].keys).to eq([:email, :password, :api_key])
+      expect(created_user[:data][:attributes][:email]).to eq(body[:email])
+      expect(created_user[:data][:attributes][:password]).to eq(body[:password])
+      expect(created_user[:data][:attributes][:password]).to eq(body[:password_confirmation])
     end
   end
   describe 'Sad Paths' do
