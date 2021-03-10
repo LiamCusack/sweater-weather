@@ -2,15 +2,15 @@ require "rails_helper"
 
 describe "Road Trip API" do
   describe "Happy Paths" do
-    describe "it can make a road trip" do
+    it "it can make a road trip" do
       body = {
-        "origin": "Denver,CO"
+        "origin": "Denver,CO",
         "destination": "Pueblo,CO",
         "api_key": "jgn983hy48thw9begh98h435"
       }
       headers = {'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json'}
 
-      post "/api/v1/users", headers: headers, params: body.to_json
+      post "/api/v1/road_trip", headers: headers, params: body.to_json
 
       road_trip = JSON.parse(response.body, symbolize_names: true)
 

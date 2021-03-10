@@ -276,6 +276,46 @@
           null
         ]
       },
+      "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/spec/api/v1/road_trip_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/liamcusack/turing/module_3/sweater-weather/sweater-weather/spec/api/v1/sessions_spec.rb": {
         "lines": [
           1,
@@ -988,6 +1028,6 @@
         ]
       }
     },
-    "timestamp": 1615364189
+    "timestamp": 1615366480
   }
 }
