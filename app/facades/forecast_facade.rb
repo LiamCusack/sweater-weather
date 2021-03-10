@@ -2,7 +2,7 @@ class ForecastFacade
   class << self
 
     def find_location(params)
-      ForecastService.find_location(params)
+      MapquestService.find_location(params)
     end
 
     def get_coordinates(latlong)
@@ -10,7 +10,7 @@ class ForecastFacade
     end
 
     def get_weather(coordinates)
-      ForecastService.get_weather(coordinates[:lat], coordinates[:lng])
+      OpenWeatherService.get_weather(coordinates[:lat], coordinates[:lng])
     end
 
     def find_forecast(params)

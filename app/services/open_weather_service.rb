@@ -1,15 +1,8 @@
-class ForecastService
+class OpenWeatherService
   class << self
-    def find_location(params)
-      response = mapconn.get("/geocoding/v1/address") do |req|
-        req.params[:location] = params
-        req.params[:key] = ENV['MAPQUEST_API_KEY']
-      end
-      json_parse(response)
-    end
 
     def get_weather(lat, long)
-      response = weatherconn.get("/data/2.5/onecall") do |req|
+      response = conn.get("/data/2.5/onecall") do |req|
         req.params['appid'] = ENV['OPEN_WEATHER_API_KEY']
         req.params[:lat] = lat
         req.params[:lon] = long
@@ -20,11 +13,7 @@ class ForecastService
 
     private
 
-    def mapconn
-      Faraday.new(url: 'http://www.mapquestapi.com')
-    end
-
-    def weatherconn
+    def conn
       Faraday.new(url: 'https://api.openweathermap.org')
     end
 
