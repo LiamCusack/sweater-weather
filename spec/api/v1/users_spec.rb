@@ -21,6 +21,7 @@ describe "Users API" do
       expect(created_user[:data][:attributes]).to be_a(Hash)
       expect(created_user[:data][:attributes].keys).to eq([:email, :api_key])
       expect(created_user[:data][:attributes][:email]).to eq(body[:email])
+      expect(created_user[:data][:attributes][:email]).to be_a(String)
       expect(created_user[:data][:attributes][:api_key]).to be_a(String)
     end
   end
@@ -57,7 +58,7 @@ describe "Users API" do
 
       post "/api/v1/users", headers: headers, params: body1.to_json
       post "/api/v1/users", headers: headers, params: body2.to_json
-      
+
       json = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to_not be_successful
