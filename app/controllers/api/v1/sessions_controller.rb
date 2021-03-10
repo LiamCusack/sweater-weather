@@ -1,4 +1,6 @@
 class Api::V1::SessionsController < ApplicationController
+  before_action :block_url_params, only: [:login]
+
   def login
     user = User.find_by(email: params[:email])
 
