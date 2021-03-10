@@ -99,5 +99,14 @@ describe "Users API" do
       expect(response.status).to be(400)
       expect(json[:error]).to eq("Bad Request: password cannot be blank")
     end
+
+    it "returns an error if you try to pass params in url" do
+      post "/api/v1/users?email=email@email.email&password=noperonis&password_confirmation=noperonies"
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to be(401)
+      expect(json[:error]).to eq("Unauthorized: You shall not pass... parameters through the url")
+    end
   end
 end

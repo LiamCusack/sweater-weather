@@ -1,4 +1,6 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :block_url_params, only: [:create]
+  
   def create
       user = User.new(user_params)
       if user.save
