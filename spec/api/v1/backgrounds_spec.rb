@@ -15,9 +15,17 @@ describe "Background API" do
       expect(data[:data]).to have_key(:type)
       expect(data[:data]).to have_key(:attributes)
       expect(data[:data][:id]).to eq(nil)
-      expect(data[:data][:type]).to eq("image")
+      expect(data[:data][:type]).to eq("backgrounds")
       expect(data[:data][:attributes]).to be_a(Hash)
-      expect(data[:data][:attributes].keys).to eq([:image])
+      expect(data[:data][:attributes].keys).to eq([:id, :location, :image_url, :photographer])
+    end
+  end
+
+  describe "Sad Paths" do
+    it "returns error when params are blank", :vcr do
+      get "/api/v1/backgrounds?location="
+
+      expect(response).to be_successful
     end
   end
 end

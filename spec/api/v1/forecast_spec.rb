@@ -23,7 +23,6 @@ describe "Forecast API" do
   describe "Sad Paths" do
     it "returns error message when given invalid params", :vcr do
       get "/api/v1/forecast?location=dfghjhfdffg"
-      binding.pry
 
       expect(response).to be_successful
     end
